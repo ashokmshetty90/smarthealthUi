@@ -1,0 +1,52 @@
+<!-- Created By : Ashok M Shetty  -->
+
+<!-- Side Bar -->
+<nav class="w3-sidebar w3-bar-block w3-collapse w3-animate-left w3-card-2" style="z-index:3;width:230px;" id="mySidebar">
+	<!-- Logo -->
+	<img src="assets/sangwin-logo.png" class="logo">
+	<!-- Sidebar Links -->
+  <a class="w3-bar-item w3-button" [ngClass]="{'w3-teal': (active == '/registration')}" routerLink="/registration"> <i class="w3-medium fa fa-user"></i>  Registration</a>
+  <a class="w3-bar-item w3-button" [ngClass]="{'w3-teal': (active == '/')}" routerLink="/"> <i class="w3-medium fa fa-user"></i> Billing</a>
+  <a class="w3-bar-item w3-button" [ngClass]="{'w3-teal': (active == '/lab')}" routerLink="/lab"> <i class="w3-medium fa fa-user"></i> Lab</a>
+  <a class="w3-bar-item w3-button" [ngClass]="{'w3-teal': (active == '/appointment')}" routerLink="/appointment"> <i class="w3-medium fa fa-user"></i> Appointment</a>
+  <a class="w3-bar-item w3-button" [ngClass]="{'w3-teal': (active == '/mis')}" routerLink="/mis"> <i class="w3-medium fa fa-user"></i> MIS</a>
+  <a class="w3-bar-item w3-button" [ngClass]="{'w3-teal': (active == '/ip')}" routerLink="/ip"> <i class="w3-medium fa fa-user"></i> IP Management</a>
+  <a class="w3-bar-item w3-button" [ngClass]="{'w3-teal': (active == '/digital')}" routerLink="/digital"> <i class="w3-medium fa fa-user"></i> Digital Marketing</a>
+  <a class="w3-bar-item w3-button" [ngClass]="{'w3-teal': (active == '/analytics')}" routerLink="/analytics"> <i class="w3-medium fa fa-user"></i> Analytics</a>
+
+
+  <a class="w3-bar-item w3-button" [ngClass]="{'w3-teal': (active == '/')}" routerLink="/"> <i class="w3-medium fa fa-user"></i>  User list</a>
+
+	<!--<a class="w3-bar-item w3-button" routerLink="/add"  [ngClass]="{'w3-teal': (active == '/add')}"> <i class="w3-medium fa fa-plus"></i>  Add new user</a>
+-->
+  <a class="w3-bar-item w3-button" routerLink="/patientRegistration" [ngClass]="{'w3-teal': (active == '/patientRegistration')}"> <i class="w3-medium fa fa-user"></i> Ford Car Details</a><hr>
+
+
+
+	<a class="w3-bar-item w3-button" (click)="logOut()"><i class="w3-medium fa fa-sign-out"></i>  Logout</a>
+</nav>
+<div class="w3-main" style="margin-left:230px;">
+  <div class="w3-container">
+    <div class="col-lg-12">
+      <div class="form-group">
+        <div class="col-lg-4">
+          <div style="margin-left:350px;"><h2>SmartHealth</h2></div>
+        </div>
+        <div class="col-lg-8">
+          <div style="margin-left:350px;"><h3><a routerLink="/patientRegistration">Patient List</a></h3></div>
+        </div>
+
+      </div>
+    </div>
+
+  </div></div>
+<hr>
+<!-- Load main contents -->
+<div class="w3-main" style="margin-left:230px;">
+	<div class="w3-container">
+	<!-- Initiate Child Routing -->
+		<router-outlet></router-outlet>
+	</div>
+</div>
+
+<!-- Created By : Ashok M Shetty  -->
